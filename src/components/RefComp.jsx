@@ -5,16 +5,29 @@ class RefComp extends Component {
         super(props);
         
         this.inputRef = React.createRef()
+        
+
     }
 
     componentDidMount(){
-        console.log(this.inputRef)
+        
+        this.inputRef.current.focus()
+        
+        
+    }
+    clickHandler =()=>{
+        alert(this.inputRef.current.value)
     }
     
     render() {
+       
         return (
             <div>
-                <input type='text' ref={this.inputRef} placeholder='Napo'/>
+                <input type='text' ref={this.inputRef} placeholder='Napo'/><br/>
+                <input type='text'  placeholder='Bona'/><br/>
+                <input type='text'  placeholder='Bonaparte'/><br/>
+                
+                <button onClick={this.clickHandler}>Click me!</button>
             </div>
         )
     }

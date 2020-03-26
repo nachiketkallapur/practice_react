@@ -8,6 +8,7 @@ import Events from './components/events-component';
 import LifecycleA from './components/lifecycle-component/lifecycleA';
 import RegularComponent from './components/regular-component';
 import PureComp from './components/pure-component';
+import RefComp from './components/RefComp';
 
 
  class App extends Component {
@@ -37,8 +38,9 @@ import PureComp from './components/pure-component';
       <EventHandling/>
       <Events/>
       <LifecycleA/> */}
-      <RegularComponent name={this.state.name}/>
-      <PureComp name="Nachiket"/>
+      {/* <RegularComponent name={this.state.name}/>
+      <PureComp name="Nachiket"/> */}
+      <RefComp/>
     </div>
   );
     }
