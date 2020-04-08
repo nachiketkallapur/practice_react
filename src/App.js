@@ -1,5 +1,5 @@
-import React,{useState, Component} from 'react';
-
+import React, { useState, Component } from 'react';
+import ReactDOM from 'react-dom'
 import './App.css';
 import Counter from './components/count-component';
 import EventHandling from './components/event-handling';
@@ -9,41 +9,39 @@ import LifecycleA from './components/lifecycle-component/lifecycleA';
 import RegularComponent from './components/regular-component';
 import PureComp from './components/pure-component';
 import RefComp from './components/RefComp';
+import PortalDemo from './components/PortalDemo';
+import Hero from './components/Hero';
 
 
- class App extends Component {
-   constructor(props) {
-     super(props)
-   
-     this.state = {
-        name:"Nachiket"
-     }
-   }
-   
+class App extends Component {
+  constructor(props) {
+    super(props)
 
-  componentDidMount=()=>{
-    setInterval(()=>{
-      this.setState({name:"Nachiket"})
-    },2000)
-  }
-
-  shouldComponentUpdate(nextProps,nextState){
-    return true
-  }
- 
-  render(){
-  return (
-    <div className="App">
-      {/* <Counter/>
-      <EventHandling/>
-      <Events/>
-      <LifecycleA/> */}
-      {/* <RegularComponent name={this.state.name}/>
-      <PureComp name="Nachiket"/> */}
-      <RefComp/>
-    </div>
-  );
+    this.state = {
+      name: "Nachiket"
     }
-}
+  }
 
-export default App
+  render() {
+    return (
+      <div>
+      <Hero name="Batman"/>
+      <Hero name="Joker"/>
+      </div>
+      )
+    }
+  }
+  
+  export default App
+  
+  // return ReactDOM.createPortal(<PortalDemo />, document.getElementById("portal-root")
+  // );
+  {/* <Counter/>
+    <EventHandling/>
+    <Events/>
+  <LifecycleA/> */}
+  // <PortalDemo/>
+{/* <RegularComponent name={this.state.name}/>
+<PureComp name="Nachiket"/> */}
+{/* <RefComp /> */}
+{/* <PortalDemo/> */}

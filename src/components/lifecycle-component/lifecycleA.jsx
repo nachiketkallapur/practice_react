@@ -13,7 +13,7 @@ class LifecycleA extends Component {
         console.log("LifeCycleA constructor")
     }
     clickHandlerForToggleEvents = () => {
-        this.setState({ showChild: !this.state.showChild });
+        this.setState({ showChild: !this.state.showChild});
     }
 
     clickHandlerForShowChild = () => {

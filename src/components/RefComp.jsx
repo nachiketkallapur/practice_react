@@ -5,6 +5,8 @@ class RefComp extends Component {
         super(props);
         this.inputRef = React.createRef();
         this.cdRef=null;                    //CAllBack Refs
+                                            //React will call the ref callback with a dom element when a component mounts
+                                            //and with null whrn a component unmounts
         this.setcdRef = (element)=>{
             this.cdRef=element
         }
